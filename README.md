@@ -42,7 +42,7 @@ When you run the application with `npm start` it instruments the source code usi
 
 **Important:** your application should have been created using CRA v3 and include `react-scripts` v2+.
 
-First, add this module as a dev dependency
+First, add NPM module [@cypress/instrument-cra](https://github.com/cypress-io/instrument-cra) as a dev dependency
 
 ```shell
 npm install --save-dev @cypress/instrument-cra
