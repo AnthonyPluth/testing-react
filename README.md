@@ -1,6 +1,6 @@
 # Testing Demo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App v3](https://github.com/facebookincubator/create-react-app).
 
 ![Fuel savings](images/fuel-savings.gif)
 
@@ -37,6 +37,30 @@ This instance of create-react-app has been enhanced with the following testing l
 When you run the application with `npm start` it instruments the source code using [@cypress/instrument-cra](https://github.com/cypress-io/instrument-cra) module. The code coverage is collected using [@cypress/code-coverage](https://github.com/cypress-io/code-coverage) plugin and saved in `coverage` folder.
 
 ![Coverage report](images/96.png)
+
+### Installation
+
+**Important:** your application should have been created using CRA v3 and include `react-scripts` v2+.
+
+First, add this module as a dev dependency
+
+```shell
+npm install --save-dev @cypress/instrument-cra
+```
+
+Load this module when starting the application in `package.json`
+
+```json
+{
+  "scripts": {
+    "start": "react-scripts -r @cypress/instrument-cra start"
+  }
+}
+```
+
+Your application's source code should be instrumented when you run `npm start`. Then you can use [@cypress/code-coverage](https://github.com/cypress-io/code-coverage) plugin to run Cypress tests and save code coverage reports.
+
+## See more
 
 For more details about code coverage, see
 - [Cypress code coverage guide](https://on.cypress.io/code-coverage)
